@@ -9,20 +9,17 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/dbTest",
+mongoose.connect("mongodb://localhost/workout",
     {
         useNewUrlParser: true,
+        useFindAndModify: false,
         useUnifiedTopology: true
     });
 
-app.use(require("./routes/api"))
+app.use(require("./routes"))
 
 app.listen(PORT, function () {
     console.log(`App is running on ${PORT}`);
 });
 
-// db.on("error", console.error.bind(console, "connection error:"));
-// db.once("open", function () {
-//     console.log("we are connected")
-// });
 
