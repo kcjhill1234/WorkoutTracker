@@ -13,9 +13,11 @@ The User can create and track workouts.  The workouts can tracked with name, typ
 
 ## Installation
 
-npm install
-npm start
 
 ## Contributing
 
 Kenny Hill
+
+## Heroku
+
+[Deployed Heroku Link](https://workoutrackerkh.herokuapp.com/)
